@@ -59,3 +59,19 @@ class PygameGtkCanvas(Gtk.Image):
         :return: None
         """
         pass
+
+    def load_image(self, filename):
+        """
+        Can't load/convert images without a display initialised.
+        Workaround is to spawn a tiny window with no border and
+        destroy it as quickly as possible.
+        :param filename: Filename of image to load
+        :return: Converted image surface
+        """
+        pygame.display.set_mode((1, 1,), pygame.NOFRAME)
+
+        image = pygame.image.load(filename).convert_alpha()
+
+        pygame.display.quit()
+
+        return image
