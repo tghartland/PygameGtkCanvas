@@ -7,8 +7,7 @@ Created on 10/06/2016
 import gi
 import pygame
 gi.require_version('Gtk', '3.0')
-gi.require_version('GdkX11', '3.0')
-from gi.repository import Gtk, GObject, GdkX11, Gdk, GdkPixbuf, GLib
+from gi.repository import Gtk, GObject, Gdk, GdkPixbuf, GLib
 
 import time
 
