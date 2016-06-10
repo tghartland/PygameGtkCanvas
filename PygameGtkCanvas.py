@@ -16,7 +16,7 @@ class PygameGtkCanvas(Gtk.Image):
     def __init__(self, width, height):
         super().__init__()
 
-        pygame.display.init()
+        pygame.init()
 
         self.last_tick_time = time.perf_counter()
 
